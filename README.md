@@ -1,49 +1,50 @@
-# 📝 GitHub Repository Documentation Guideline
+# Counting Calories AI Project
+This project was built as a way to explore angular as a standalone AI endpoint.
+While building this project I learned about angular components, microservices, and ai interactions.
 
-This document provides a structured approach for documenting a project's GitHub repository, ensuring consistency, clarity, and the inclusion of personal insights gained during development.
-
-## 1. Project Description and Overview (README.md)
+## 1. Project Description and Overview
 
 The `README.md` is the first file a visitor sees. It should be inviting, informative, and complete.
 
 ### 1.1 Core Information
-* **Project Title:** Clear and descriptive.
-* **Catchy Tagline:** A single, memorable sentence summarizing the project's purpose.
-* **Project Status:** Use badges (e.g., build status, license, version) to quickly convey important information.
-* **Purpose:** Clearly state *what* the project does and *why* it was built.
-* **Target Audience:** Who is this project for? (e.g., developers, end-users, specific communities).
+* Counting Calories AI
+* MEAL -> PICTURE -> CALORIES
+* Protype complete: v0.9
+* This Project was built for people who want quick rough calorie estimations day to day. Since keeping track of calories can be daunting, costly, and time consuming this product offers an easy and efficent alternative.
 
-### 1.2 Setup and Usage
-* **Prerequisites:** List all required software, tools, and dependencies (e.g., Node.js, Python, specific database).
-* **Installation:** Step-by-step instructions for getting the project running locally.
-    * *Example:* `git clone <repo-url>`, `npm install`, `python setup.py install`.
-* **Quick Start:** Simple commands or actions to immediately see the project in action.
-* **Configuration:** Detail any necessary environment variables or configuration files (`.env`, `config.json`, etc.).
-* **Running Tests:** Instructions on how to execute the test suite (if applicable).
-
+### 1.2 Tech Stack
+* Node.js and these packages
+* Gemini
+* Angular
+* Tailwind
+- note - these packages need to be installed in order to run this application locally
+  
 ---
 
 ## 2. Developer's Journey & Personal Insights
 
-This section is where you bring your unique experience and reflections into the documentation. It should be honest and insightful.
-
 ### 2.1 Technical Decisions & Rationale
 * **Core Technology Stack:**
-    * List the main languages, frameworks, and libraries used.
-    * *Personal Note:* Briefly explain **why** you chose these technologies over alternatives. *(e.g., "Chose React over Vue for better integration with existing company infrastructure.")*
+    * Node.js
+    * Tailwind
+    * Gemini
+    * Angular
+* **Design Decisions:**
+    * I chose to use Tailwind to give me creative control over the style of the project instead of using templated css like Bootstrap or Material.
+    * I chose to use gemini as it was the most capable out of the api models to interpret pictures of food into lists of foods and calories.
+    * I chose Angular because I am already familar with React. I wanted to learn something new.
 * **Architecture/Design:**
-    * Describe the overall structure (e.g., microservices, MVC, component-based).
-    * *Personal Note:* Detail any significant **architectural pivots** you made and the reason for the change. *(e.g., "Initially used a monolithic structure but switched to separate frontend/backend services due to scaling concerns.")*
+    * The architecture for this project is component and service based to really take advantage of Angular's components and utilize javascript using an OOP strategy.
+    * I used components and OOP as those are the practices I am most familiar with.
 
 ### 2.2 Challenges, Learning, and Triumphs
 * **Key Hurdles Encountered:**
-    * Identify the most difficult technical problems you solved (e.g., performance issues, complex data modeling, API integration).
-    * *Personal Note:* Describe the **"Aha!" moment** or the process you went through to overcome this challenge.
-* **Unexpected Learnings:**
-    * What concepts or tools did you gain a deeper understanding of while building this app?
-    * *Personal Note:* Mention something you thought was easy but turned out to be hard, or vice-versa.
-* **Success Story/Favorite Feature:**
-    * What part of the project are you most proud of and why? *(e.g., "The custom authentication flow came out cleaner than I expected.")*
+    * Setting up an angular application with best practices for seperating components and services
+    * Learning the new @if and @for components in angular
+    * Learning signal, input, and output when exporting components in angular, as well as how to pass props properly when using these ([]="" vs thing={{}})
+    * Publishing to github pages by building the angular application into a single index file
+    * Creating and integrating several services into an orchestrated service to implement the flow of the picture to calorie list
+    * Using custom interfaces (data objects/types) in the input, output, signal exports.
 
 ---
 
@@ -77,8 +78,4 @@ Create separate markdown files for complex topics to keep the `README.md` clean.
 * **`CONTRIBUTING.md`**: Detailed contribution rules, code of conduct, and PR templates.
 * **`ARCHITECTURE.md` (or `DESIGN.md`)**: Detailed diagrams, data models, and API endpoints for a deep dive.
 * **`LICENSE.md`**: Essential for open-source projects. Always include a license.
-
-***
-
-By following this guideline, your documentation will not only serve as a technical reference but also as a powerful portfolio piece that showcases your thought process and problem-solving skills.
 

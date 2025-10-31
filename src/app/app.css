@@ -1,0 +1,9 @@
+.glass-background {
+    background-color: black;
+    border-radius: 1rem;
+    border: transparent 1px solid;
+    background-image: radial-gradient(circle at 50% 350%, rgb(20, 22, 44), white),
+    radial-gradient(circle at 50% 150%, black, white);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}

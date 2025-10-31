@@ -1,0 +1,25 @@
+<div class="flex justify-center items-center">
+    <ul>
+        @for (outputItem of outputArray(); track outputItem.id) {
+            @if(outputItem.id == 0) {
+                <li class="border-b-black border-b-2 py-3 shadow">
+                    <app-output-item class="flex justify-center items-center" [outputString]="outputItem"/>
+                </li>
+
+            }
+            @else if(outputItem.id == outputArray()?.length){
+                <li class="border-t-black border-t-2 py-3 shadow">
+                <app-output-item class="flex justify-center items-center" [outputString]="outputItem"/>
+                </li>
+
+            }
+            @else{
+                <li class="flex justify-between items-center h-20 border-[1px] border-black rounded-2xl my-2 shadow-lg px-2">
+
+                <app-output-item class="flex justify-between items-center" [outputString]="outputItem"/>
+                </li>
+
+            }
+        }
+    </ul>
+</div>

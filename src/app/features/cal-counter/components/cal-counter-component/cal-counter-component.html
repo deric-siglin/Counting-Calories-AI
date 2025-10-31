@@ -1,0 +1,13 @@
+@if (calCounterOrchestration.status === 'fileDrop') {
+    <!-- so since the app-file-drop component emits the full object we need-->
+    <!-- all we need to pass here to the kickOffOS(data) is the $event -->
+    <!-- because the event here is the emission -->
+    <app-file-drop (fileSubmittedOutput)="kickOffOS($event)"/>
+}
+@if (calCounterOrchestration.status === 'outputList') {
+    <app-ouput-list [outputArray]="this.calCounterOrchestration.outputList"/>
+}
+@if (calCounterOrchestration.status === 'loading') {
+    <!-- loading -->
+     <app-loading/>
+}

@@ -1,12 +1,12 @@
-#Notes on Angular
+# Notes on Angular
 These are some notes on the key things I learned and that are important for building an Angular application.
-##1. Setup
+## 1. Setup
 ng new my-app
 ng generate component /folder/component-name
 ng generate service /folder/component-name
 ng generate interface /folder/component-name
 ---
-##Signals and props
+## 2. Signals and props
 input()
 output()
 signal()
@@ -45,7 +45,7 @@ changeText(): void{
 }
 and now anytime you hover it would set the text to something random and change the ptext on the screen in real time
 ---
-##2. @if and @for
+## 3. @if and @for
 @if and @for are html annotations for angular
 They go directly in the html
 example
@@ -69,7 +69,7 @@ look at the output-list.html for a great example of @if, @for and props!
 the track is required for all for loops
 and you need a object that has an id to do that, so you need to make an interface (strings do not inherently work with this)
 ---
-##3. File structure
+## 4. File structure
 This is what the typical angular app should look like
 src/
 ├── app/
@@ -89,7 +89,7 @@ src/
 │   │   │   │   ├── loading.component.ts (The reusable loading indicator)
 │   │   │   │   ├── ... (Other common UI elements)
 ---
-##4. Services
+## 5. Services
 Angular makes this for you
 basically you are making what is the equivalent of a bean
 It is an exportable clss with a constructor (this is where you can effectively autowire services)
